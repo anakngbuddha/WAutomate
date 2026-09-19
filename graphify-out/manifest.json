@@ -3,5 +3,255 @@
     "mtime": 1789231457.408711,
     "ast_hash": "65e50e3cb4a4b1bc78143e92916314ac",
     "semantic_hash": "65e50e3cb4a4b1bc78143e92916314ac"
+  },
+  "alembic/env.py": {
+    "mtime": 1789787698.885605,
+    "ast_hash": "d1fca96bb8ac782cde6d46165fe5d947",
+    "semantic_hash": ""
+  },
+  "alembic/versions/001_initial_schema.py": {
+    "mtime": 1789787709.6562295,
+    "ast_hash": "fa407f537ff00edcbc0ebe1d6d83fe7b",
+    "semantic_hash": ""
+  },
+  "tests/conftest.py": {
+    "mtime": 1789787823.3210096,
+    "ast_hash": "f4a26f87668e479f28878396e1c0d954",
+    "semantic_hash": ""
+  },
+  "tests/test_agent.py": {
+    "mtime": 1789787760.918793,
+    "ast_hash": "01cc2287f2cdc2b18b3acabdb97106a6",
+    "semantic_hash": ""
+  },
+  "tests/test_api_endpoints.py": {
+    "mtime": 1789788741.1474037,
+    "ast_hash": "126497b63a01eed15a838e56910040a2",
+    "semantic_hash": ""
+  },
+  "tests/test_end_to_end.py": {
+    "mtime": 1789787769.9522655,
+    "ast_hash": "7cb76dd84af6d501b9b6cf094eb2c722",
+    "semantic_hash": ""
+  },
+  "tests/test_enforcement.py": {
+    "mtime": 1789787755.8619082,
+    "ast_hash": "be2def111f9050a50ec8e2b8d2c3d82c",
+    "semantic_hash": ""
+  },
+  "tests/test_idempotency.py": {
+    "mtime": 1789787730.3539395,
+    "ast_hash": "92dda933a2c1d7c1e671463def6de7bc",
+    "semantic_hash": ""
+  },
+  "tests/test_leases.py": {
+    "mtime": 1789787736.4588156,
+    "ast_hash": "5686c0a34a2ed304c14c258af5f1e106",
+    "semantic_hash": ""
+  },
+  "tests/test_policy.py": {
+    "mtime": 1789787724.2586856,
+    "ast_hash": "d77b20245dcd57cd13422b6d8493d659",
+    "semantic_hash": ""
+  },
+  "tests/test_reconciliation.py": {
+    "mtime": 1789788353.4383125,
+    "ast_hash": "3a0d8d2eecda18c1b22efbf31aa623e4",
+    "semantic_hash": ""
+  },
+  "tests/test_vm_state.py": {
+    "mtime": 1789787743.4975326,
+    "ast_hash": "fc26b4899279872eff94242269e3939f",
+    "semantic_hash": ""
+  },
+  "weautomate/__init__.py": {
+    "mtime": 1789787467.9394631,
+    "ast_hash": "e26be8c9961701a63e7d5818e7007009",
+    "semantic_hash": ""
+  },
+  "weautomate/agent/__init__.py": {
+    "mtime": 1789787576.8370087,
+    "ast_hash": "214ff369f78f9108e424c6e288029b53",
+    "semantic_hash": ""
+  },
+  "weautomate/agent/activation.py": {
+    "mtime": 1789787564.478705,
+    "ast_hash": "98117735b764b2e19a26b4b27787bb92",
+    "semantic_hash": ""
+  },
+  "weautomate/agent/agent.py": {
+    "mtime": 1789787842.612324,
+    "ast_hash": "8d57838c912c65b0d3910b5c2a36a431",
+    "semantic_hash": ""
+  },
+  "weautomate/agent/hardware.py": {
+    "mtime": 1789787559.1877685,
+    "ast_hash": "028d69fba79e4774e2e8aa58488a38ea",
+    "semantic_hash": ""
+  },
+  "weautomate/config.py": {
+    "mtime": 1789787474.7142007,
+    "ast_hash": "cec06b47f467742c5434e4493976fc85",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/__init__.py": {
+    "mtime": 1789787646.1282463,
+    "ast_hash": "8e5b106cea766662d420a4cdb01fc2f6",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/app.py": {
+    "mtime": 1789788732.2445252,
+    "ast_hash": "c13d264dc9132525ff7b7faf42b7b14f",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/lease_manager.py": {
+    "mtime": 1789787537.8318856,
+    "ast_hash": "fa8cb62dcf8c3328d31a6064d8e6b2f6",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/policy.py": {
+    "mtime": 1789787503.3403554,
+    "ast_hash": "fb210553c2d9d24b3247fbbf5c18d2bb",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/__init__.py": {
+    "mtime": 1789787635.3195503,
+    "ast_hash": "a23504579870feb9c5dc570c851c29bc",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/audit.py": {
+    "mtime": 1789787625.4554243,
+    "ast_hash": "ff93f8b7f7315eb5cd707d6a317d21c8",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/dashboard.py": {
+    "mtime": 1789787631.1973345,
+    "ast_hash": "acbff7f07d25fa0d291775874f6c4666",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/enforcement.py": {
+    "mtime": 1789787614.1197276,
+    "ast_hash": "6c3c44704a43019d70707efd54cdac77",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/leases.py": {
+    "mtime": 1789787606.166482,
+    "ast_hash": "ea6a0a383df27d07e60afa45d1b8a651",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/reconciliation.py": {
+    "mtime": 1789787619.73372,
+    "ast_hash": "3a134e433979104bbb4af9fa5929dced",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/vms.py": {
+    "mtime": 1789787599.7105198,
+    "ast_hash": "a990f1c70564eb62a29351d5b1b7a75d",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/schemas.py": {
+    "mtime": 1789787831.6088364,
+    "ast_hash": "df067872c801b9cb4e4c5b32bcd9e883",
+    "semantic_hash": ""
+  },
+  "weautomate/dashboard/static/app.js": {
+    "mtime": 1789787688.5939355,
+    "ast_hash": "26d228e3d53f2545cb77a49e301f5aa1",
+    "semantic_hash": ""
+  },
+  "weautomate/database/__init__.py": {
+    "mtime": 1789787495.6360679,
+    "ast_hash": "1a6a4cca1c20ddacf40e47fb37a794e8",
+    "semantic_hash": ""
+  },
+  "weautomate/database/models.py": {
+    "mtime": 1789787485.3912747,
+    "ast_hash": "2851237fd7de1e13e223fd5152d3b400",
+    "semantic_hash": ""
+  },
+  "weautomate/database/session.py": {
+    "mtime": 1789787490.9338498,
+    "ast_hash": "3c14e62242fb3f67a0e184c9a9091517",
+    "semantic_hash": ""
+  },
+  "weautomate/hypervisor/__init__.py": {
+    "mtime": 1789787524.6663423,
+    "ast_hash": "d069857335841544cd49d9deb0b853ef",
+    "semantic_hash": ""
+  },
+  "weautomate/hypervisor/base.py": {
+    "mtime": 1789787509.84908,
+    "ast_hash": "6c5bf1b3dc03f608d8a6e25597346302",
+    "semantic_hash": ""
+  },
+  "weautomate/hypervisor/hyperv.py": {
+    "mtime": 1789787520.9307554,
+    "ast_hash": "3b7a455d12eec04d9b428f5a70eba495",
+    "semantic_hash": ""
+  },
+  "weautomate/hypervisor/mock.py": {
+    "mtime": 1789787515.1727448,
+    "ast_hash": "b4bbc48b6cb7178192a1b388200ccdb7",
+    "semantic_hash": ""
+  },
+  "weautomate/kms/__init__.py": {
+    "mtime": 1789787587.0186439,
+    "ast_hash": "de7cf9391435bcf9da6c07ffd0dcb543",
+    "semantic_hash": ""
+  },
+  "weautomate/kms/validator.py": {
+    "mtime": 1789787582.6739106,
+    "ast_hash": "73d9e6c94b36648d78fefb03f1709d70",
+    "semantic_hash": ""
+  },
+  "weautomate/reconciliation/__init__.py": {
+    "mtime": 1789787552.2962918,
+    "ast_hash": "2bbf88685624ee9826fbb426c06e20b9",
+    "semantic_hash": ""
+  },
+  "weautomate/reconciliation/engine.py": {
+    "mtime": 1789788338.3036215,
+    "ast_hash": "d82044aa33bdef99ffc0d3b3db1bd7dc",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1789232459.003472,
+    "ast_hash": "1c60beb17980523cc64243357f9fe00e",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1789210424.1656775,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  "weautomate/dashboard/static/index.html": {
+    "mtime": 1789787659.3576076,
+    "ast_hash": "c3f1a5ec8806cc659a4f86b1d75ecc94",
+    "semantic_hash": ""
+  },
+  "scripts/install-agent.ps1": {
+    "mtime": 1789788722.7936096,
+    "ast_hash": "0df161a069959d05c832f11d58ba1351",
+    "semantic_hash": ""
+  },
+  "weautomate/agent/cli.py": {
+    "mtime": 1789788225.5977201,
+    "ast_hash": "6d92ecc94205ff959d4cd8710f89b669",
+    "semantic_hash": ""
+  },
+  "DEPLOYMENT_GUIDE.md": {
+    "mtime": 1789788507.4176626,
+    "ast_hash": "bec36b87cff90c2a9a53b17b89aa8ffc",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1789788512.8904574,
+    "ast_hash": "44d6c87d628f89538448b1da4ed66e64",
+    "semantic_hash": ""
+  },
+  "weautomate/controller/routes/agent_download.py": {
+    "mtime": 1789788713.2537143,
+    "ast_hash": "c3859ed6c31cb06f919396ebe7ede440",
+    "semantic_hash": ""
   }
 }

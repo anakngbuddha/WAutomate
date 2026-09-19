@@ -1,1 +1,17 @@
-{"0": "State Persistence & API Management", "1": "License Controller & Admission Policy", "2": "Hypervisor Reconciliation & VM State Engine", "3": "VM Agent & KMS Activation Infrastructure", "4": "Licensing Compliance & Legal Entitlement"}
+{
+  "0": "State Persistence & API Management",
+  "1": "License Controller & Admission Policy",
+  "2": "Hypervisor Reconciliation & VM State Engine",
+  "3": "VM Agent & KMS Activation Infrastructure",
+  "4": "Licensing Compliance & Legal Entitlement",
+  "5": "models.py",
+  "6": "app.js",
+  "7": "session.py",
+  "8": "001_initial_schema.py",
+  "10": "rules/graphify.md",
+  "11": "workflows/graphify.md",
+  "12": "weautomate/__init__.py",
+  "13": ".get_entitlement_summary",
+  "18": "test_audit_logs_endpoint",
+  "20": "install-agent.ps1"
+}
