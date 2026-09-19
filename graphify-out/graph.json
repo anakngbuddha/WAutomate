@@ -1,0 +1,682 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "project_plan_tripartite_authority_system",
+        "label": "Tripartite Authority System",
+        "nodes": [
+          "project_plan_license_controller",
+          "project_plan_kms_host",
+          "project_plan_hypervisor_cloud_platform"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "Project_Plan.md"
+      },
+      {
+        "id": "project_plan_dynamic_license_core_architecture",
+        "label": "Dynamic License Core Architecture",
+        "nodes": [
+          "project_plan_license_controller",
+          "project_plan_vm_agent",
+          "project_plan_kms_host",
+          "project_plan_reconciliation_engine",
+          "project_plan_postgresql_state_store"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "Project_Plan.md"
+      },
+      {
+        "id": "project_plan_enforcement_tiers_hierarchy",
+        "label": "Enforcement Tiers Hierarchy",
+        "nodes": [
+          "project_plan_enforcement_tier_1",
+          "project_plan_enforcement_tier_2",
+          "project_plan_enforcement_tier_3"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "Project_Plan.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "License Controller",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a75.2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Decides what is allowed (allocation, leases, policy, reconciliation, audit) across an org-wide pool of core entitlements.",
+      "id": "project_plan_license_controller",
+      "community": 1,
+      "norm_label": "license controller"
+    },
+    {
+      "label": "KMS Host (Activation Authority)",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a75.5, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Decides what is activated via Volume Activation Services role with customer CSVLK. Configured, not built.",
+      "id": "project_plan_kms_host",
+      "community": 3,
+      "norm_label": "kms host (activation authority)"
+    },
+    {
+      "label": "Hypervisor / Cloud Platform",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a73, \u00a74, \u00a710",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Decides what is actually running; independent private cloud infrastructure exposing VM power-state / control-plane API.",
+      "id": "project_plan_hypervisor_cloud_platform",
+      "community": 2,
+      "norm_label": "hypervisor / cloud platform"
+    },
+    {
+      "label": "Tripartite Authority Principle",
+      "file_type": "rationale",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a70 Core Principle",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "License Controller decides what is allowed; KMS decides what is activated; Hypervisor decides what is actually running. None must stand in for another.",
+      "id": "project_plan_tripartite_authority_principle",
+      "community": 1,
+      "norm_label": "tripartite authority principle"
+    },
+    {
+      "label": "Flexible Virtualization Benefit (FVB)",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a71",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Microsoft licensing foundation enabling dynamic core allocation to Windows Server Standard VMs on authorized non-listed infrastructure.",
+      "id": "project_plan_flexible_virtualization_benefit",
+      "community": 4,
+      "norm_label": "flexible virtualization benefit (fvb)"
+    },
+    {
+      "label": "FVB Legal Eligibility Conditions",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a71",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Requires active SA/subscription, non-Listed Provider host, same server farm, 8-core minimum per VM, 16-core customer floor.",
+      "id": "project_plan_fvb_legal_eligibility",
+      "community": 4,
+      "norm_label": "fvb legal eligibility conditions"
+    },
+    {
+      "label": "Written Microsoft / Reseller Confirmation",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a71, \u00a710",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Highest-priority open action: legal confirmation must be obtained in writing before production reliance.",
+      "id": "project_plan_written_reseller_confirmation",
+      "community": 4,
+      "norm_label": "written microsoft / reseller confirmation"
+    },
+    {
+      "label": "VM Agent",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a75.1, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Windows Service on target VMs. Connects outbound-only to controller, heartbeats, caches locally, queries activation without touching license keys.",
+      "id": "project_plan_vm_agent",
+      "community": 3,
+      "norm_label": "vm agent"
+    },
+    {
+      "label": "Windows Server 2025 Standard VM",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a70, \u00a71, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Standardized target OS edition with 8-core minimum allocation, KMS GVLK configured.",
+      "id": "project_plan_windows_server_2025_vm",
+      "community": 3,
+      "norm_label": "windows server 2025 standard vm"
+    },
+    {
+      "label": "Outbound HTTPS / mTLS Transport",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Agent-initiated outbound-only transport; requires no open inbound ports on guest VMs.",
+      "id": "project_plan_mtls_transport",
+      "community": 3,
+      "norm_label": "outbound https / mtls transport"
+    },
+    {
+      "label": "Tier 1: Pre-Boot Admission Control",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a73",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Preferred enforcement mechanism: controller gates platform VM start requests directly, ensuring true prevention.",
+      "id": "project_plan_enforcement_tier_1",
+      "community": 1,
+      "norm_label": "tier 1: pre-boot admission control"
+    },
+    {
+      "label": "Tier 2: Platform RBAC Gating",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a73",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Practical fallback: platform VM start rights restricted to controller service account; human starts route via controller.",
+      "id": "project_plan_enforcement_tier_2",
+      "community": 1,
+      "norm_label": "tier 2: platform rbac gating"
+    },
+    {
+      "label": "Tier 3: Detection & Alerting",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a73",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Minimum viable stopgap: reconciliation detects unauthorized running VM within minutes and fires alerts.",
+      "id": "project_plan_enforcement_tier_3",
+      "community": 2,
+      "norm_label": "tier 3: detection & alerting"
+    },
+    {
+      "label": "VM State Detection Model",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a74",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Six discrete states (RUNNING, STOPPING, STOPPED, TERMINATED, UNREACHABLE, UNKNOWN) governing lease reservation and release.",
+      "id": "project_plan_vm_state_detection_model",
+      "community": 2,
+      "norm_label": "vm state detection model"
+    },
+    {
+      "label": "Unreachable State Policy",
+      "file_type": "rationale",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a74",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Strict policy: heartbeat loss without authoritative hypervisor confirmation does NOT auto-release, preventing over-allocation during network disconnects.",
+      "id": "project_plan_unreachable_state_policy",
+      "community": 2,
+      "norm_label": "unreachable state policy"
+    },
+    {
+      "label": "Controller API (FastAPI)",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.2, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "FastAPI service exposing idempotent endpoints for allocation, lease management, and policy enforcement.",
+      "id": "project_plan_controller_api",
+      "community": 0,
+      "norm_label": "controller api (fastapi)"
+    },
+    {
+      "label": "Reconciliation Engine",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.4, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "First-class background subsystem comparing expected leases vs actual hypervisor running state on schedule.",
+      "id": "project_plan_reconciliation_engine",
+      "community": 2,
+      "norm_label": "reconciliation engine"
+    },
+    {
+      "label": "PostgreSQL State Store",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.3, \u00a76, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Relational state backend using SQLAlchemy + Alembic, storing entitlements, vms, leases, and audit_log.",
+      "id": "project_plan_postgresql_state_store",
+      "community": 0,
+      "norm_label": "postgresql state store"
+    },
+    {
+      "label": "Append-Only Audit Log",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.7, \u00a76",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Immutable compliance trail recording all allocate, release, reconciliation, and enforcement events with timestamp and actor.",
+      "id": "project_plan_append_only_audit_log",
+      "community": 0,
+      "norm_label": "append-only audit log"
+    },
+    {
+      "label": "Management Dashboard (React)",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.6, \u00a77",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "React + REST UI for monitoring capacity; strictly off the licensing-critical execution path.",
+      "id": "project_plan_management_dashboard",
+      "community": 0,
+      "norm_label": "management dashboard (react)"
+    },
+    {
+      "label": "Idempotent Request Key (request_id)",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a76",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Client-supplied unique request key ensuring retried network requests cannot allocate duplicate core seats.",
+      "id": "project_plan_idempotent_request_key",
+      "community": 0,
+      "norm_label": "idempotent request key (request_id)"
+    },
+    {
+      "label": "Hypervisor UUID (Immutable Identity)",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a76, \u00a78",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Hardware/platform UUID preventing cloned or renamed VMs from impersonating legitimate allocated machines.",
+      "id": "project_plan_hypervisor_uuid",
+      "community": 3,
+      "norm_label": "hypervisor uuid (immutable identity)"
+    },
+    {
+      "label": "Scale-Appropriate Descoping",
+      "file_type": "rationale",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a78",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Deliberately excludes multi-controller HA, snapshot fencing tokens, and combinatorial failure matrices for 10-VM scale.",
+      "id": "project_plan_scale_appropriate_descoping",
+      "community": 1,
+      "norm_label": "scale-appropriate descoping"
+    },
+    {
+      "label": "Explicit Scope Boundaries",
+      "file_type": "concept",
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a711",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "RDS CALs (perpetual), VDA E3 per-user licensing, and routine guest slmgr /upk deactivation are explicitly excluded.",
+      "id": "project_plan_explicit_out_of_scope",
+      "community": 4,
+      "norm_label": "explicit scope boundaries"
+    }
+  ],
+  "links": [
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a73",
+      "weight": 1.0,
+      "source": "project_plan_enforcement_tier_1",
+      "target": "project_plan_license_controller"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a73",
+      "weight": 1.0,
+      "source": "project_plan_enforcement_tier_2",
+      "target": "project_plan_license_controller"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.2",
+      "weight": 1.0,
+      "source": "project_plan_license_controller",
+      "target": "project_plan_controller_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a71, \u00a72",
+      "weight": 1.0,
+      "source": "project_plan_license_controller",
+      "target": "project_plan_flexible_virtualization_benefit"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a70, \u00a72",
+      "weight": 1.0,
+      "source": "project_plan_license_controller",
+      "target": "project_plan_hypervisor_cloud_platform"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72",
+      "weight": 1.0,
+      "source": "project_plan_license_controller",
+      "target": "project_plan_kms_host"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a70, \u00a72",
+      "weight": 1.0,
+      "source": "project_plan_license_controller",
+      "target": "project_plan_tripartite_authority_principle"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a78",
+      "weight": 1.0,
+      "source": "project_plan_scale_appropriate_descoping",
+      "target": "project_plan_license_controller"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a77",
+      "weight": 1.0,
+      "source": "project_plan_windows_server_2025_vm",
+      "target": "project_plan_kms_host"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a74, \u00a75.4, \u00a77",
+      "weight": 1.0,
+      "source": "project_plan_reconciliation_engine",
+      "target": "project_plan_hypervisor_cloud_platform"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a711",
+      "weight": 1.0,
+      "source": "project_plan_explicit_out_of_scope",
+      "target": "project_plan_flexible_virtualization_benefit"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a71",
+      "weight": 1.0,
+      "source": "project_plan_flexible_virtualization_benefit",
+      "target": "project_plan_fvb_legal_eligibility"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a71, \u00a710",
+      "weight": 1.0,
+      "source": "project_plan_fvb_legal_eligibility",
+      "target": "project_plan_written_reseller_confirmation"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72",
+      "weight": 1.0,
+      "source": "project_plan_vm_agent",
+      "target": "project_plan_controller_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a77",
+      "weight": 1.0,
+      "source": "project_plan_vm_agent",
+      "target": "project_plan_mtls_transport"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a72, \u00a75.1",
+      "weight": 1.0,
+      "source": "project_plan_vm_agent",
+      "target": "project_plan_windows_server_2025_vm"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a76",
+      "weight": 1.0,
+      "source": "project_plan_windows_server_2025_vm",
+      "target": "project_plan_hypervisor_uuid"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a73",
+      "weight": 1.0,
+      "source": "project_plan_enforcement_tier_3",
+      "target": "project_plan_reconciliation_engine"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a74, \u00a75.4",
+      "weight": 1.0,
+      "source": "project_plan_reconciliation_engine",
+      "target": "project_plan_vm_state_detection_model"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a74",
+      "weight": 1.0,
+      "source": "project_plan_vm_state_detection_model",
+      "target": "project_plan_unreachable_state_policy"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.2, \u00a76",
+      "weight": 1.0,
+      "source": "project_plan_controller_api",
+      "target": "project_plan_idempotent_request_key"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.2, \u00a75.3",
+      "weight": 1.0,
+      "source": "project_plan_controller_api",
+      "target": "project_plan_postgresql_state_store"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.6, \u00a77",
+      "weight": 1.0,
+      "source": "project_plan_management_dashboard",
+      "target": "project_plan_controller_api"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.4, \u00a76",
+      "weight": 1.0,
+      "source": "project_plan_reconciliation_engine",
+      "target": "project_plan_postgresql_state_store"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md",
+      "source_location": "\u00a75.7, \u00a76",
+      "weight": 1.0,
+      "source": "project_plan_append_only_audit_log",
+      "target": "project_plan_postgresql_state_store"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "project_plan_tripartite_authority_system",
+      "label": "Tripartite Authority System",
+      "nodes": [
+        "project_plan_license_controller",
+        "project_plan_kms_host",
+        "project_plan_hypervisor_cloud_platform"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md"
+    },
+    {
+      "id": "project_plan_dynamic_license_core_architecture",
+      "label": "Dynamic License Core Architecture",
+      "nodes": [
+        "project_plan_license_controller",
+        "project_plan_vm_agent",
+        "project_plan_kms_host",
+        "project_plan_reconciliation_engine",
+        "project_plan_postgresql_state_store"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md"
+    },
+    {
+      "id": "project_plan_enforcement_tiers_hierarchy",
+      "label": "Enforcement Tiers Hierarchy",
+      "nodes": [
+        "project_plan_enforcement_tier_1",
+        "project_plan_enforcement_tier_2",
+        "project_plan_enforcement_tier_3"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Project_Plan.md"
+    }
+  ]
+}
